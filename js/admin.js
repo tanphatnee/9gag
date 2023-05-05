@@ -65,33 +65,41 @@ function renderPosts() {
   tbody.innerHTML = "";
   posts.forEach((post, index) => {
     post.id = index + 1;
+    if (post.isBlocked === undefined) {
+      post.isBlocked = false;
+    }
   });
   posts.forEach((post) => {
-    const tr = document.createElement("tr");
+    const tr = document.createElement("tr");       
     tr.innerHTML = `
-    <td>${post.id}</td>
-    <td><img src="${post.image}" width="100"></td>
-    <td>${post.userid}</td>
-    <td>${post.title}</td>
-    <td>
-      <button class="edit-btn" data-id="${post.id}">Edit</button>
-      <button class="remove-btn" data-id="${post.id}">Remove</button>
-    </td>
-  `;
+      <td>${post.id}</td>
+      <td><img src="${post.image}" width="100"></td>
+      <td>${post.userid}</td>
+      <td>${post.title}</td>
+      <td>
+        <button class="edit-btn" data-id="${post.id}">Edit</button>
+        <button class="block-btn" data-id="${post.id}">
+          ${post.isBlocked ? "Unblock" : "Block"}
+        </button>
+      </td>
+    `;
     tbody.appendChild(tr);
   });
-  const removeButtons = document.querySelectorAll(".remove-btn");
-  removeButtons.forEach((button) => {
+  const blockButtons = document.querySelectorAll(".block-btn");
+  blockButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const id = button.dataset.id;
       const index = posts.findIndex((post) => post.id == id);
       if (index >= 0) {
-        posts.splice(index, 1);
+        const post = posts[index];
+        post.isBlocked = !post.isBlocked;
         localStorage.setItem("posts", JSON.stringify(posts));
-        renderPosts();renderPostMain();
+        renderPosts();
       }
     });
   });
+}
+
   const editButtons = document.querySelectorAll(".edit-btn");
   editButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -111,7 +119,7 @@ function renderPosts() {
     });
   });
 
-}
+
 function renderPostMain() {
   let posts = JSON.parse(localStorage.getItem("posts_user")) || [];
   let post = JSON.parse(localStorage.getItem("posts")) || [];

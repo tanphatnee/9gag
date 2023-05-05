@@ -99,4 +99,8 @@ product-form {
     }
     
 
+    .btn-blocked {
+      background-color: red;
+      color: white;
+    }
     
