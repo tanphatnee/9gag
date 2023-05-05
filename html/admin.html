@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/modalSingUp.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav class="header_nav">
+                <a class="header_menu" href=""><img src="../image/menu-icon.png" alt=""></a>
+                <a class="header_logo" href="">9GAG</a>
+                <ul class="header_nav_ul">
+                    <li><a href="">🔀Shuffle</a></li>
+                    <li><a href="">📱Get App</a></li>
+                    <li><a href="">💀Memeland</a></li>
+                    <li><a href="">🥔Potatoz</a></li>
+                    <li><a href="">🏝Captainz</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <div class="header_search">
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></a>
+                </div>
+                <div class="header_login">
+                    <button id="signup-btn" class="header_btn" style="background-color: transparent; font-size: 14px; margin-left: 20px;"  >Xin Chào ADMIN</button>
+                    <div id="modalLogin" class="modalLogin">
+                        <div class="modalLogin-content">
+                            <a class="header_logo">9GAG</a>
+                            <span class="close">&times;</span>
+                            <input type="text" placeholder="UserName">
+                            <input type="password" placeholder="Password">
+                            <button type="submit_login">Log In</button>
+                            <p>Chưa có tài khoản ?<button class="signup_btn">Sign up</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <section class="product-information" style="padding-top: 0%;">
+                <div class="head">
+                    <h1>Quản lí bài Post</h1>
+                </div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ảnh</th>
+                            <th>NameUserPost</th>
+                            <th>Nội dung </th>
+
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </section>
+            <section id="update" style="padding-top: 5%;">
+                <h1>Chỉnh Sửa Bài Post</h1>
+                <form class="post-form" id="post-form">
+                    <label for="image">Link Ảnh:</label>
+                    <input class="image_update" type="text" id="image" name="image" >
+            
+                    <label for="post_name">Name User</label>
+                    <input type="text" id="post-name" name="post-name" >
+            
+                    <label for="post-description">Nội Dung:</label>
+                    <textarea id="post-description" name="post-description" ></textarea>
+            
+                    <button id="submit-btn" type="submit">Thêm</button>
+                    <button id="save-btn" type="button" style="display:none" >Lưu</button>
+                </form>
+            </section>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../js/modalSignUp.js"></script> -->
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

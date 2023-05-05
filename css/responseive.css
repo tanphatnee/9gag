@@ -1,0 +1,33 @@
+@media screen and (max-width:1110px) {
+    .ads {
+        display: none;
+    }
+
+    .main_content_right {
+        margin-left: 355px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:1005px) {
+    .main_content_left {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .main_content_left {
+        display: none !important;
+    }
+    .main_content_right{
+        margin-left: 135px;
+        width: 630px;
+    }
+}
+
+@media screen and (max-width:755px){
+    .main_content_right {
+        margin-left: 70px;
+        width: 600px;
+    }
+}

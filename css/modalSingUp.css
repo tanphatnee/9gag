@@ -1,0 +1,138 @@
+
+
+/* CSS cho modal Sign Up */
+.modalSignUp {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #999;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 30%;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button[type=submit_btn] {
+  background-color: #09f;
+  width: 100px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button[type=submit_btn]:hover {
+  background-color: #1479d8;
+}
+
+.login_btn {
+  border: 1px solid transparent;
+  border-radius: 3px;
+
+}
+
+.login_btn:hover {
+  background-color: rgb(163, 163, 163);
+  color: #fff;
+}
+
+/* CSS cho modal Login */
+.modalLogin {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modalLogin-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #999;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+button[type=submit_login] {
+  background-color: #09f;
+  width: 100px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button[type=submit_login]:hover {
+  background-color: #1479d8;
+}
+
+.signup_btn {
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.signup_btn:hover {
+  background-color: rgb(163, 163, 163);
+  color: #fff;
+}
+
+#username_error, #email_error, #password_error, #repassword_error, #password_login_error {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom:10px ;
+  color: red;
+}
